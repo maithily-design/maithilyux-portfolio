@@ -1,0 +1,109 @@
+{
+  "navigation": {
+    "links": ["Home", "About", "Resume"]
+  },
+  "hero": {
+    "eyebrow": "PRODUCT DESIGNER & UX RESEARCHER",
+    "heading": "Hi, I'm Maithily Ashtankar",
+    "role": "Currently doing UX Research",
+    "company": "@ Lenovo",
+    "tagline": "I build end-to-end experiences:\nfrom research to shipped product.",
+    "stampCaption": "MAITHILY · ♌ LEO",
+    "toolIcons": ["Figma", "Maze", "Miro", "Notion", "VS Code", "GitHub"]
+  },
+  "workToggle": {
+    "label": "CASE STUDIES",
+    "tabs": ["UX Design", "UX Research"]
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "heading": "What people say\nabout working with me",
+    "items": [
+      {
+        "company": "Lenovo",
+        "quote": "She quickly ramped up in a complex project space, asked thoughtful questions that got to the heart of user needs, and brought a fresh perspective to our team's work. What stood out most was her ability to connect with participants in a genuine way and translate those conversations into clear, actionable insights.",
+        "name": "Brian Richardson",
+        "role": "Lead User Researcher, Lenovo",
+        "initials": "BR",
+        "color": "blue"
+      },
+      {
+        "company": "Lenovo",
+        "quote": "I was impressed with Maithily's attention to detail, thoroughness, and ability to ramp up on previous research while improving the quality of the data. Her ability to summarize complex data and bring interesting insights to our team was deeply appreciated.",
+        "name": "Diane Bowser, Ph.D.",
+        "role": "AI UX Enterprise Innovator",
+        "initials": "DB",
+        "color": "green"
+      },
+      {
+        "company": "Lenovo",
+        "quote": "She demonstrated good instincts when asking questions of her stakeholders as she developed research design. A standout to me is Maithily's collaborative spirit and team work. She was always eager to receive feedback to make her work stronger.",
+        "name": "Dana C. Gierdowski, PhD",
+        "role": "Strategic Research Leader, Lenovo",
+        "initials": "DG",
+        "color": "purple"
+      },
+      {
+        "company": "Lenovo",
+        "quote": "It was a pleasure to support Maithily during her time at Lenovo. She has a fantastic ability to absorb feedback and quickly iterate on her work. Her willingness to seek out perspectives and her excellent communication skills made her a true joy to work with.",
+        "name": "Peijie He",
+        "role": "Mixed-Methods UX Researcher, Lenovo",
+        "initials": "PH",
+        "color": "blue"
+      },
+      {
+        "company": "Lenovo",
+        "quote": "I've also had the pleasure of working with Maithily while at Lenovo. She is driven, intelligent, and hardworking. She was able to easily interpret my input and create a great study with questions that supported what our team wanted to ask users.",
+        "name": "Daniel Pollack",
+        "role": "UX Prototyper, Lenovo",
+        "initials": "DP",
+        "color": "green"
+      },
+      {
+        "company": "Hushh AI",
+        "quote": "She has a unique ability to understand user needs deeply and translate those insights into intuitive and engaging designs. Her collaborative approach made working together a seamless and productive experience! Her contributions have been invaluable to our project.",
+        "name": "Emma (Xueyun) Tang",
+        "role": "Product Designer, Hushh AI",
+        "initials": "ET",
+        "color": "purple"
+      },
+      {
+        "company": "Hushh AI",
+        "quote": "She's sharp, has good intuition, and excellent communication skills. She showed good initiative in many of the projects we assigned her, which is one of the best signals I have for identifying high potential recruits. We will miss her!",
+        "name": "Justin Donaldson",
+        "role": "CTO, Curvo Labs (prev. Hushh)",
+        "initials": "JD",
+        "color": "blue"
+      }
+    ]
+  },
+  "footer": {
+    "signoff": "Let's build something great together.",
+    "subtext": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "cta": "Say hello →",
+    "socials": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/maithilyashtankar/" },
+      { "label": "Behance", "url": "#" },
+      { "label": "Email", "url": "mailto:maithily@email.com" }
+    ],
+    "copyright": "© 2026 Maithily Ashtankar · Designed & coded with ♡"
+  },
+  "about": {
+    "letter": "It started with code, not design.\n\nAs a computer science student, I was always drawn to the front end — the part people actually see and touch. I spent hours in HTML, CSS, and JavaScript, but somewhere between debugging layouts and pixel-pushing buttons, I realized I wasn't just writing code. I was making decisions about how things should look, feel, and work.\n\nThe real turning point was a mathematics teaching website for dyslexic students. For the first time, I wasn't building something to ship — I was solving a real problem for real people. Watching someone learn better because of something I designed? That changed everything.\n\nI taught myself UX from there. Not because it was a career move, but because I couldn't stop. I loved the storytelling, the problem-solving, the feeling that design could genuinely help someone.\n\nThat's how I stumbled into this world. And I'm still here because it still feels exactly like that.",
+    "experience": [
+      { "company": "Lenovo", "role": "UX Researcher", "period": "2024 — Present", "description": "Leading UX research initiatives across enterprise and consumer product lines." },
+      { "company": "Anvilist", "role": "UX Designer", "period": "2024", "description": "Solo designer — built the design system and redesigned core product pages for a SaaS startup." },
+      { "company": "Hushh AI", "role": "UX Design Intern", "period": "2023", "description": "Established the MVP for a luxury-tech consumer app. Field studies, interviews, and usability testing." }
+    ],
+    "stamps": [
+      { "caption": "MY CITY. DON'T ARGUE WITH A LEO", "label": "NYC" },
+      { "caption": "THE ONE WHO PLANNED THIS TRIP", "label": "NYC · FRIENDS" },
+      { "caption": "COOKS FOR THE COMPLIMENTS, STAYS FOR THE LEFTOVERS", "label": "HOME KITCHEN" },
+      { "caption": "MAIN CHARACTER ENERGY IN THE DESERT", "label": "ARIZONA" },
+      { "caption": "WALKED THE GOLDEN GATE. OBVIOUSLY TOOK 47 PHOTOS", "label": "SAN FRANCISCO" },
+      { "caption": "WILL PRESENT THIS LIKE A TED TALK", "label": "AT MY DESK" },
+      { "caption": "BLAMES MERCURY, NEVER HERSELF", "label": "♌ VIBES" },
+      { "caption": "JUDGES CAFES BY THEIR OATMILK", "label": "CAFE LIFE" }
+    ]
+  }
+}

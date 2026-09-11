@@ -1,0 +1,97 @@
+{
+  "uxDesign": [
+    {
+      "slug": "anvilist-design-system",
+      "title": "Crafting the Anvilist Design System",
+      "subtitle": "I followed the Atomic Design Principles to build a Design System for a SaaS platform to reduce design inconsistencies for a cohesive user experience.",
+      "tags": ["DESIGN SYSTEMS", "SAAS"],
+      "thumbnail": "/images/thumbnails/anvilist-thumb.mp4",
+      "metadata": {
+        "role": "Solo Designer, UX & Visual Design",
+        "responsibilities": "Page Redesign, IA, User Flow, Prototyping",
+        "deliverables": "Brand Guidelines, Components, Documentation",
+        "type": "Design System, SaaS · B2B"
+      }
+    },
+    {
+      "slug": "hushh-wallet",
+      "title": "Hushh Wallet: Finding the MVP for a Start-Up",
+      "subtitle": "As a Full Stack UX Designer at Hushh, I played a key role in developing the Hushh Wallet from the ground up, significantly boosting user adoption through the implementation of innovative features.",
+      "tags": ["PRODUCT DESIGN", "MOBILE"],
+      "thumbnail": "/images/thumbnails/hushh-thumb.mp4",
+      "metadata": {
+        "role": "UX Designer Intern",
+        "timeline": "5 Months, Summer 2023",
+        "industry": "Luxury-Tech, Consumer App",
+        "methods": "Field Studies, Interviews, Usability Testing, MVP"
+      }
+    },
+    {
+      "slug": "blossom-postpartum",
+      "title": "Blossom: A Postpartum Friend",
+      "subtitle": "Fem-Tech, a rising industry, has one of the most unseen problem statements. I explored the nuances in delivering features and designed a scalable application for women.",
+      "tags": ["FEMTECH", "PRODUCT DESIGN"],
+      "thumbnail": "/images/thumbnails/blossom-thumb.mp4",
+      "metadata": {
+        "role": "UX Designer",
+        "timeline": "3 Weeks",
+        "industry": "FemTech, Healthcare",
+        "context": "Protothon 2023, Design Challenge"
+      }
+    },
+    {
+      "slug": "craigslist-redesign",
+      "title": "Reimagining Craigslist in Today's Era",
+      "subtitle": "This case analysis explores revamping the Craigslist webpage, emphasizing a user-friendly strategy that solved 90% of the platform's user experience problems.",
+      "tags": ["E-COMMERCE", "USABILITY TESTING"],
+      "thumbnail": "/images/thumbnails/craigslist-thumb.mp4",
+      "metadata": {
+        "role": "UX Designer & UX Researcher",
+        "timeline": "12 Weeks",
+        "deliverables": "User Research, Usability Testing, High-Fi Designs",
+        "type": "E-Commerce, Website Redesign"
+      }
+    }
+  ],
+  "uxResearch": [
+    {
+      "slug": "battery-life-perception",
+      "title": "Battery Life Perception",
+      "subtitle": "Understanding how users define, experience, and respond to battery-related friction. Why the most important laptop feature is also the most misunderstood.",
+      "tags": ["SURVEY", "DIARY STUDY"],
+      "thumbnail": "/images/thumbnails/battery-thumb.mp4",
+      "metadata": {
+        "role": "Co-Lead Researcher, Qualitative Analysis",
+        "methods": "Survey (n=1,398), Diary Study (n=17)",
+        "scope": "4 Countries: US, UK, DE, China",
+        "team": "Lenovo UXD, 3 Researchers"
+      }
+    },
+    {
+      "slug": "cx-unify-baseline",
+      "title": "CX Unify: Baseline Usability Research",
+      "subtitle": "Where today's CX tools work, where they break, and what should be fixed first.",
+      "tags": ["USABILITY TEST", "ENTERPRISE"],
+      "thumbnail": "/images/thumbnails/cx-unify-thumb.mp4",
+      "metadata": {
+        "role": "Sole UX Researcher, Internal Tools / LXG",
+        "participants": "12 Expert Users, 3 Role Types, 6 Regions",
+        "scope": "6 Task Scenarios, Current Toolset Baseline",
+        "methods": "Moderated Usability Test, SUS, Time-on-Task"
+      }
+    },
+    {
+      "slug": "lenovo-my-hub",
+      "title": "Lenovo My Hub: Information Architecture",
+      "subtitle": "Ran card sort and tree test studies to restructure the information architecture of Lenovo My Hub, improving navigation findability and content discoverability.",
+      "tags": ["CARD SORT", "TREE TEST"],
+      "thumbnail": "/images/thumbnails/myhub-thumb.mp4",
+      "metadata": {
+        "role": "UX Researcher",
+        "methods": "Card Sort, Tree Test",
+        "scope": "Lenovo Internal Tools",
+        "team": "Lenovo UXD"
+      }
+    }
+  ]
+}

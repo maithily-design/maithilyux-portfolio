@@ -1,0 +1,28 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="218" height="32" viewBox="0 0 218 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="hero__tool-icons">
+<g id="Icon / Figma">
+<circle cx="14" cy="18" r="14" fill="#0C8CE9" fill-opacity="0.15"/>
+<circle cx="14" cy="18" r="13.5" stroke="#0C8CE9" stroke-opacity="0.3"/>
+</g>
+<g id="Icon / Maze">
+<circle cx="52" cy="18" r="14" fill="#E05A3E" fill-opacity="0.15"/>
+<circle cx="52" cy="18" r="13.5" stroke="#E05A3E" stroke-opacity="0.3"/>
+</g>
+<g id="Icon / Miro">
+<circle cx="90" cy="18" r="14" fill="#7B45D6" fill-opacity="0.15"/>
+<circle cx="90" cy="18" r="13.5" stroke="#7B45D6" stroke-opacity="0.3"/>
+</g>
+<g id="Icon / Notion">
+<circle cx="128" cy="18" r="14" fill="#1E1E24" fill-opacity="0.15"/>
+<circle cx="128" cy="18" r="13.5" stroke="#1E1E24" stroke-opacity="0.3"/>
+</g>
+<g id="Icon / VS Code">
+<circle cx="166" cy="18" r="14" fill="#0A70BA" fill-opacity="0.15"/>
+<circle cx="166" cy="18" r="13.5" stroke="#0A70BA" stroke-opacity="0.3"/>
+</g>
+<g id="Icon / GitHub">
+<circle cx="204" cy="18" r="14" fill="#4A4A52" fill-opacity="0.15"/>
+<circle cx="204" cy="18" r="13.5" stroke="#4A4A52" stroke-opacity="0.3"/>
+</g>
+</g>
+</svg>
