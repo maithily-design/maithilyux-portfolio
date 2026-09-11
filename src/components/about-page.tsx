@@ -124,7 +124,7 @@ export function AboutPage() {
 
       {/* Origin story */}
       <section className="bg-dots relative overflow-hidden px-lg pb-6xl pt-28 sm:px-6 md:pb-24">
-        <div className="relative mx-auto max-w-[1272px]">
+        <div className="relative mx-auto max-w-[1440px]">
           <p className="font-mono text-mono-label uppercase text-brand">
             About me
           </p>
@@ -132,9 +132,9 @@ export function AboutPage() {
             How I stumbled into design
           </h1>
 
-          <div className="mt-16 grid max-w-[1080px] gap-x-16 gap-y-16 lg:grid-cols-[663fr_379fr] lg:gap-x-[110px] lg:items-start">
+          <div className="mx-auto mt-16 flex flex-col items-center gap-16 lg:w-fit lg:flex-row lg:items-start lg:gap-[110px]">
             {/* Paper letter — exported directly from Figma as one image */}
-            <div className="relative">
+            <div className="relative w-full max-w-[663px] shrink-0">
               {/* Paperclip, pinned ~76% across the top edge of the letter */}
               <Paperclip
                 aria-hidden
@@ -147,13 +147,13 @@ export function AboutPage() {
                 width={696}
                 height={735}
                 className="h-auto w-full"
-                sizes="(min-width: 1024px) 663px, calc(100vw - 32px)"
+                sizes="663px"
                 priority
               />
             </div>
 
             {/* Photo stamp */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex shrink-0 justify-center">
               <figure className="flex w-[280px] max-w-full rotate-2 flex-col items-center gap-4 rounded-[2px] border-[1.5px] border-dashed border-gray-300 bg-white p-4 shadow-medium transition-transform hover:rotate-0">
                 <div className="relative aspect-[373.85/460.102] w-full overflow-hidden rounded-[2px] bg-canvas">
                   <Image
@@ -175,7 +175,7 @@ export function AboutPage() {
 
       {/* Work experience */}
       <section className="px-lg py-6xl sm:px-6 md:py-24">
-        <div className="mx-auto max-w-[1272px]">
+        <div className="mx-auto max-w-[1440px]">
           <p className="font-mono text-mono-label uppercase text-brand">
             Experience
           </p>
@@ -211,7 +211,7 @@ export function AboutPage() {
 
       {/* Outside of work / Leo stamps */}
       <section className="bg-dots relative overflow-hidden px-lg py-6xl sm:px-6 md:py-24">
-        <div className="relative mx-auto max-w-[1272px]">
+        <div className="relative mx-auto max-w-[1440px]">
           <p className="font-mono text-mono-label uppercase text-brand">
             Outside of work
           </p>

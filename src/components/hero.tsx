@@ -32,7 +32,7 @@ export function Hero() {
         whileInView={{ opacity: 1, y: 0, rotate: 0.37 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full max-w-[1052px] overflow-hidden shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04),0px_10px_28px_-8px_rgba(0,0,0,0.07)]"
+        className="relative w-full max-w-[1200px] overflow-hidden shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04),0px_10px_28px_-8px_rgba(0,0,0,0.07)]"
       >
         {/* Paper surface: base tint + texture + diagonal sheen */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -73,7 +73,7 @@ export function Hero() {
         {/* Card content */}
         <div className="relative flex flex-col items-center gap-10 px-6 py-10 sm:px-10 lg:flex-row lg:items-center lg:px-14 lg:py-12">
           {/* Text column */}
-          <div className="flex min-w-0 flex-1 flex-col items-start gap-5">
+          <div className="flex w-full min-w-0 flex-1 flex-col items-start gap-5">
             <motion.p
               custom={0}
               variants={rise}
@@ -102,7 +102,7 @@ export function Hero() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="text-[20px] font-semibold leading-7 tracking-[-0.1px]"
+              className="w-full text-[20px] font-semibold leading-7 tracking-[-0.1px]"
             >
               <span className="text-blue-600">{role} </span>
               <span className="text-red-400">{company}</span>
@@ -143,7 +143,7 @@ export function Hero() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: reduceMotion ? 0 : 0.3, ease: "easeOut" }}
             whileHover={reduceMotion ? undefined : { rotate: 0 }}
-            className="shrink-0"
+            className="w-full max-w-[301px] shrink-0"
           >
             <figure className="flex w-[301px] max-w-full flex-col items-center rounded-[2px] border-[1.5px] border-dashed border-gray-300 bg-white p-4 shadow-[0px_4px_16px_0px_rgba(102,165,255,0.1)]">
               <div className="relative aspect-[272/302] w-full overflow-hidden rounded-[2px] bg-[#f0f6ff]">

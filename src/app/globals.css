@@ -134,6 +134,7 @@
     line-height: 28px;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   h1,
   h2,

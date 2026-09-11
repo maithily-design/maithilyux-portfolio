@@ -10,8 +10,8 @@ export function TestimonialsSection() {
   const testimonials = siteData.testimonials.items;
 
   return (
-    <section className="bg-canvas px-4 py-24 sm:px-6">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col gap-10">
+    <section className="bg-canvas py-24">
+      <div className="mx-auto flex w-full max-w-[1120px] flex-col gap-10 px-4 sm:px-6">
         <div>
           <div>
             <p className="font-mono text-mono-label uppercase text-brand">
@@ -22,23 +22,24 @@ export function TestimonialsSection() {
             </h2>
           </div>
         </div>
+      </div>
 
-        <div className="testimonial-carousel -mx-4 overflow-hidden px-4 sm:-mx-6 sm:px-6">
-          <div className="testimonial-track flex w-max gap-4 pb-4">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={`${testimonial.name}-${testimonial.company}`}
-                testimonial={testimonial}
-              />
-            ))}
-            {testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={`${testimonial.name}-${testimonial.company}-duplicate`}
-                testimonial={testimonial}
-                ariaHidden
-              />
-            ))}
-          </div>
+      {/* Full-bleed: spans the viewport, independent of the heading's max-width */}
+      <div className="testimonial-carousel mt-10 overflow-hidden">
+        <div className="testimonial-track flex w-max gap-4 px-4 pb-4 sm:px-6">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard
+              key={`${testimonial.name}-${testimonial.company}`}
+              testimonial={testimonial}
+            />
+          ))}
+          {testimonials.map((testimonial) => (
+            <TestimonialCard
+              key={`${testimonial.name}-${testimonial.company}-duplicate`}
+              testimonial={testimonial}
+              ariaHidden
+            />
+          ))}
         </div>
       </div>
     </section>

@@ -37,13 +37,7 @@ export function WorkSection() {
   const projects = projectGroups[activeTab];
 
   return (
-    <section
-      id="work"
-      className={
-        "scroll-mt-24 px-4 pb-24 sm:px-6 " +
-        (activeTab === "UX Design" ? "bg-dots" : "")
-      }
-    >
+    <section id="work" className="bg-dots scroll-mt-24 px-4 pb-24 sm:px-6">
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="font-mono text-mono-label uppercase text-brand">
