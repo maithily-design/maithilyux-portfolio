@@ -324,7 +324,7 @@ export function HushhCaseStudy() {
                   loop
                   muted
                   playsInline
-                  className="h-full w-full scale-[1.06] object-cover"
+                  className="h-full w-full object-contain"
                 >
                   <source src="/videos/hushh-thumb.mp4" type="video/mp4" />
                 </video>

@@ -123,18 +123,18 @@ export function AboutPage() {
       <SiteNav />
 
       {/* Origin story */}
-      <section className="bg-dots relative overflow-hidden px-lg pb-6xl pt-28 sm:px-6 md:pb-24">
-        <div className="relative mx-auto max-w-[1440px]">
+      <section className="bg-dots relative overflow-hidden pb-16 pt-28 sm:pb-20 lg:pb-24">
+        <div className="home-shell relative">
           <p className="font-mono text-mono-label uppercase text-brand">
             About me
           </p>
-          <h1 className="mt-4 text-[32px] font-bold leading-[1.15] tracking-[-0.005em] text-ink sm:text-[40px] sm:leading-[48px]">
+          <h1 className="mt-4 max-w-[12ch] text-[32px] font-bold leading-[1.15] tracking-[-0.005em] text-ink sm:text-[40px] sm:leading-[48px]">
             How I stumbled into design
           </h1>
 
-          <div className="mx-auto mt-16 flex flex-col items-center gap-16 lg:w-fit lg:flex-row lg:items-start lg:gap-[110px]">
+          <div className="mt-8 grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_260px] md:gap-8 lg:mt-10 lg:grid-cols-[minmax(0,663px)_280px] lg:gap-14 xl:gap-20">
             {/* Paper letter — exported directly from Figma as one image */}
-            <div className="relative w-full max-w-[663px] shrink-0">
+            <div className="relative w-full max-w-[663px] -translate-y-2 md:-translate-y-4 md:justify-self-start lg:-translate-y-5">
               {/* Paperclip, pinned ~76% across the top edge of the letter */}
               <Paperclip
                 aria-hidden
@@ -147,20 +147,20 @@ export function AboutPage() {
                 width={696}
                 height={735}
                 className="h-auto w-full"
-                sizes="663px"
+                sizes="(min-width: 1280px) 663px, (min-width: 768px) calc(100vw - 380px), calc(100vw - 32px)"
                 priority
               />
             </div>
 
             {/* Photo stamp */}
-            <div className="flex shrink-0 justify-center">
-              <figure className="flex w-[280px] max-w-full rotate-2 flex-col items-center gap-4 rounded-[2px] border-[1.5px] border-dashed border-gray-300 bg-white p-4 shadow-medium transition-transform hover:rotate-0">
+            <div className="flex justify-center md:justify-self-end lg:pt-12">
+              <figure className="flex w-[240px] max-w-full rotate-2 flex-col items-center gap-4 rounded-[2px] border-[1.5px] border-dashed border-gray-300 bg-white p-4 shadow-medium transition-transform hover:rotate-0 lg:w-[280px]">
                 <div className="relative aspect-[373.85/460.102] w-full overflow-hidden rounded-[2px] bg-canvas">
                   <Image
                     src="/about/origin-photo.jpg"
                     alt="Maithily dressed up, smiling"
                     fill
-                    sizes="288px"
+                    sizes="(min-width: 1024px) 280px, 240px"
                     className="object-cover"
                   />
                 </div>
@@ -174,8 +174,8 @@ export function AboutPage() {
       </section>
 
       {/* Work experience */}
-      <section className="px-lg py-6xl sm:px-6 md:py-24">
-        <div className="mx-auto max-w-[1440px]">
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="home-shell">
           <p className="font-mono text-mono-label uppercase text-brand">
             Experience
           </p>
@@ -183,11 +183,11 @@ export function AboutPage() {
             Where I&apos;ve worked
           </h2>
 
-          <div className="mt-10 flex flex-col border-t border-hairline">
+          <div className="mt-8 flex flex-col border-t border-hairline lg:mt-10">
             {experience.map((job) => (
               <div
                 key={job.company}
-                className="flex flex-col gap-2 border-b border-hairline py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+                className="grid gap-3 border-b border-hairline py-5 sm:grid-cols-[minmax(0,1fr)_220px] sm:items-center sm:gap-8 lg:py-6"
               >
                 <div className="flex flex-col gap-1.5">
                   <p className="text-h4 text-ink">{job.company}</p>
@@ -195,7 +195,7 @@ export function AboutPage() {
                     {job.description}
                   </p>
                 </div>
-                <div className="flex shrink-0 flex-col gap-1 sm:items-end">
+                <div className="flex flex-col gap-1 sm:items-end">
                   <p className="font-mono text-mono-tag uppercase text-brand">
                     {job.period}
                   </p>
@@ -210,8 +210,8 @@ export function AboutPage() {
       </section>
 
       {/* Outside of work / Leo stamps */}
-      <section className="bg-dots relative overflow-hidden px-lg py-6xl sm:px-6 md:py-24">
-        <div className="relative mx-auto max-w-[1440px]">
+      <section className="bg-dots relative overflow-hidden py-16 sm:py-20 lg:py-24">
+        <div className="home-shell relative">
           <p className="font-mono text-mono-label uppercase text-brand">
             Outside of work
           </p>

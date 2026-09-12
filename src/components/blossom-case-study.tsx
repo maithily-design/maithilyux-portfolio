@@ -315,7 +315,7 @@ export function BlossomCaseStudy() {
                   loop
                   muted
                   playsInline
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 >
                   <source src="/videos/blossom-thumb.mp4" type="video/mp4" />
                 </video>

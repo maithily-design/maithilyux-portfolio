@@ -24,7 +24,7 @@ export function Footer({
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden bg-blue-0 px-4 py-12 text-blue-700 sm:px-6"
+      className="relative overflow-hidden bg-blue-0 py-14 text-blue-700 sm:py-16 lg:py-20"
     >
       <div
         aria-hidden
@@ -35,8 +35,8 @@ export function Footer({
           backgroundSize: "20px 20px",
         }}
       />
-      <div className="relative mx-auto flex w-full max-w-[1800px] flex-col gap-10">
-        <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+      <div className="home-shell relative flex flex-col gap-10">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1.15fr)_minmax(260px,0.85fr)] md:items-end">
           <div>
             <p className="font-mono text-mono-label uppercase text-blue-700">
               {eyebrow}

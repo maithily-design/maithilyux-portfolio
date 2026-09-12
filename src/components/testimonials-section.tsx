@@ -10,8 +10,8 @@ export function TestimonialsSection() {
   const testimonials = siteData.testimonials.items;
 
   return (
-    <section className="bg-canvas py-24">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col gap-10 px-4 sm:px-6">
+    <section className="bg-dots py-20 sm:py-24 lg:py-28">
+      <div className="home-shell flex flex-col gap-10">
         <div>
           <div>
             <p className="font-mono text-mono-label uppercase text-brand">
@@ -26,7 +26,7 @@ export function TestimonialsSection() {
 
       {/* Full-bleed: spans the viewport, independent of the heading's max-width */}
       <div className="testimonial-carousel mt-10 overflow-hidden">
-        <div className="testimonial-track flex w-max gap-4 px-4 pb-4 sm:px-6">
+        <div className="testimonial-track flex w-max gap-4 px-4 pb-4 sm:px-6 lg:px-8">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={`${testimonial.name}-${testimonial.company}`}
@@ -58,7 +58,7 @@ function TestimonialCard({
   return (
     <article
       aria-hidden={ariaHidden}
-      className="w-[310px] shrink-0 rounded-[24px] border border-hairline bg-white p-6 shadow-small sm:w-[380px]"
+      className="w-[min(82vw,310px)] shrink-0 rounded-[24px] border border-hairline bg-white p-6 shadow-small sm:w-[360px] xl:w-[380px]"
     >
       <div className="flex items-center gap-3">
         <div

@@ -169,6 +169,29 @@
 }
 
 @layer utilities {
+  .home-shell {
+    margin-inline: auto;
+    width: min(calc(100% - 32px), 1052px);
+  }
+
+  @media (min-width: 768px) {
+    .home-shell {
+      width: min(calc(100% - 48px), 1052px);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .home-shell {
+      width: min(calc(100% - 96px), 1120px);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .home-shell {
+      width: min(calc(100% - 128px), 1180px);
+    }
+  }
+
   /* Dotted pattern backdrop used behind the hero */
   .bg-dots {
     background-color: #fdfcfb;

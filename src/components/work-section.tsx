@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { Lock } from "lucide-react";
 
 import caseStudies from "@/data/case-studies.json";
 import siteData from "@/data/site-data.json";
+import { isProtectedCaseStudySlug } from "@/lib/case-study-auth";
 
 type Project = {
   slug: string;
@@ -35,10 +37,11 @@ export function WorkSection() {
   const [activeTab, setActiveTab] = useState<ProjectGroup>("UX Design");
   const reduceMotion = useReducedMotion();
   const projects = projectGroups[activeTab];
+  const stackProjects = true;
 
   return (
-    <section id="work" className="bg-dots scroll-mt-24 px-4 pb-24 sm:px-6">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-12">
+    <section id="work" className="bg-dots scroll-mt-24 pb-20 pt-8 sm:pb-24 sm:pt-10 lg:pb-28 lg:pt-12">
+      <div className="home-shell flex flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="font-mono text-mono-label uppercase text-brand">
             {siteData.workToggle.label}
@@ -80,8 +83,8 @@ export function WorkSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
           className={
-            "flex w-full max-w-[1052px] flex-col " +
-            (activeTab === "UX Research" ? "gap-8 pb-[42vh]" : "gap-12")
+            "flex w-full flex-col " +
+            (stackProjects ? "gap-6 pb-24 lg:pb-32" : "gap-12")
           }
         >
           {projects.map((project, index) => (
@@ -89,7 +92,7 @@ export function WorkSection() {
               key={project.slug}
               project={project}
               index={index}
-              stack={activeTab === "UX Research"}
+              stack={stackProjects}
             />
           ))}
         </motion.div>
@@ -110,6 +113,7 @@ function CaseStudyCard({
   const reduceMotion = useReducedMotion();
   const craigslist = isCraigslistProject(project);
   const enableStack = Boolean(stack && !reduceMotion);
+  const locked = isProtectedCaseStudySlug(project.slug);
 
   return (
     <motion.article
@@ -117,13 +121,20 @@ function CaseStudyCard({
       whileInView={enableStack ? { opacity: 1, scale: 1, y: 0 } : undefined}
       viewport={{ once: false, amount: 0.35 }}
       transition={{ duration: 0.65, delay: index * 0.05, ease: "easeOut" }}
-      style={enableStack ? { zIndex: index + 1 } : undefined}
+      style={
+        enableStack
+          ? {
+              top: `calc(7rem + ${index * 18}px)`,
+              zIndex: index + 1,
+            }
+          : undefined
+      }
       className={
-        "grid overflow-hidden rounded-[16px] bg-blue-0 p-2.5 shadow-[0px_4px_8px_rgba(0,0,0,0.04)] lg:min-h-[572px] lg:grid-cols-[490px_1fr] " +
-        (enableStack ? "sticky top-28" : "")
+        "grid overflow-hidden rounded-[16px] bg-blue-0 p-2.5 shadow-[0px_4px_8px_rgba(0,0,0,0.04)] lg:min-h-[540px] lg:grid-cols-[minmax(410px,0.88fr)_minmax(0,1.12fr)] xl:min-h-[572px] " +
+        (enableStack ? "sticky" : "")
       }
     >
-      <div className="flex min-h-[420px] flex-col justify-center gap-8 rounded-t-[14px] bg-white px-6 py-9 lg:min-h-[552px] lg:rounded-l-[14px] lg:rounded-r-none">
+      <div className="flex min-h-[400px] flex-col justify-center gap-8 rounded-t-[14px] bg-white px-6 py-9 sm:px-8 lg:min-h-[520px] lg:rounded-l-[14px] lg:rounded-r-none xl:min-h-[552px]">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
@@ -133,6 +144,13 @@ function CaseStudyCard({
               {tag}
             </span>
           ))}
+
+          {locked ? (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1 font-mono text-mono-tag uppercase text-white">
+              <Lock aria-hidden className="size-3" />
+              Locked
+            </span>
+          ) : null}
         </div>
 
         <div className="flex flex-col gap-6">
@@ -146,15 +164,16 @@ function CaseStudyCard({
 
         <Link
           href={`/work/${project.slug}`}
+          prefetch={locked ? false : undefined}
           className="inline-flex w-fit rotate-[0.37deg] items-center justify-center rounded-[6px] border-2 border-white bg-blue-500 px-6 py-3 font-mono text-[12px] font-medium uppercase leading-4 tracking-[0.06em] text-white shadow-[0px_2px_4px_#e0edff] transition hover:-translate-y-0.5 hover:bg-blue-600"
         >
-          View Case Study
+          {locked ? "Unlock Case Study" : "View Case Study"}
         </Link>
       </div>
 
       <div
         className={
-          "flex min-h-[320px] items-center justify-center overflow-hidden rounded-b-[14px] lg:min-h-[552px] lg:rounded-l-none lg:rounded-r-[14px] " +
+          "flex min-h-[320px] items-center justify-center overflow-hidden rounded-b-[14px] lg:min-h-[520px] lg:rounded-l-none lg:rounded-r-[14px] xl:min-h-[552px] " +
           (craigslist ? "bg-[#ffd7fb]" : "bg-white")
         }
       >

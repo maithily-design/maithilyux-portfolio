@@ -23,7 +23,7 @@ export function Hero() {
   };
 
   return (
-    <section id="top" className="bg-dots flex flex-col items-center gap-[70px] px-lg pb-10 pt-28 sm:px-6">
+    <section id="top" className="bg-dots flex flex-col items-center pb-14 pt-28 sm:pb-16 lg:pb-20">
       <SiteNav />
 
       {/* Hero card */}
@@ -32,7 +32,7 @@ export function Hero() {
         whileInView={{ opacity: 1, y: 0, rotate: 0.37 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full max-w-[1200px] overflow-hidden shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04),0px_10px_28px_-8px_rgba(0,0,0,0.07)]"
+        className="home-shell relative overflow-hidden shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04),0px_10px_28px_-8px_rgba(0,0,0,0.07)]"
       >
         {/* Paper surface: base tint + texture + diagonal sheen */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -41,7 +41,7 @@ export function Hero() {
             src="/hero/card-texture.jpg"
             alt=""
             fill
-            sizes="1052px"
+            sizes="(min-width: 1600px) 1180px, (min-width: 1280px) 1120px, 1052px"
             className="object-cover opacity-90"
             priority
           />
@@ -71,7 +71,7 @@ export function Hero() {
         <img src="/hero/torn-right.svg" alt="" aria-hidden className="pointer-events-none absolute inset-y-0 right-0 h-full w-3" />
 
         {/* Card content */}
-        <div className="relative flex flex-col items-center gap-10 px-6 py-10 sm:px-10 lg:flex-row lg:items-center lg:px-14 lg:py-12">
+        <div className="relative flex flex-col items-center gap-10 px-6 py-10 sm:px-10 lg:flex-row lg:items-center lg:gap-12 lg:px-14 lg:py-12 xl:gap-16">
           {/* Text column */}
           <div className="flex w-full min-w-0 flex-1 flex-col items-start gap-5">
             <motion.p

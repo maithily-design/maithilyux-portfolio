@@ -301,7 +301,7 @@ export function AnvilistCaseStudy() {
                   loop
                   muted
                   playsInline
-                  className="h-full w-full scale-[1.12] object-cover"
+                  className="h-full w-full object-contain"
                 >
                   <source src="/videos/anvilist-thumb.mp4" type="video/mp4" />
                 </video>
