@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import siteData from "@/data/site-data.json";
@@ -14,11 +14,54 @@ const colorClasses = {
 export function TestimonialsSection() {
   const testimonials = siteData.testimonials.items;
   const carouselRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+
+    if (!carousel) return;
+
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reduceMotion) return;
+
+    let animationFrame = 0;
+    let previousTimestamp = performance.now();
+
+    const moveCarousel = (timestamp: number) => {
+      const delta = timestamp - previousTimestamp;
+      previousTimestamp = timestamp;
+
+      if (!pausedRef.current) {
+        const loopPoint = carousel.scrollWidth / 2;
+
+        carousel.scrollLeft += delta * 0.028;
+
+        if (carousel.scrollLeft >= loopPoint) {
+          carousel.scrollLeft -= loopPoint;
+        }
+      }
+
+      animationFrame = requestAnimationFrame(moveCarousel);
+    };
+
+    animationFrame = requestAnimationFrame(moveCarousel);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
 
   function scrollTestimonials(direction: "previous" | "next") {
     const carousel = carouselRef.current;
 
     if (!carousel) return;
+
+    const loopPoint = carousel.scrollWidth / 2;
+
+    if (direction === "previous" && carousel.scrollLeft < carousel.clientWidth) {
+      carousel.scrollLeft += loopPoint;
+    }
 
     carousel.scrollBy({
       left:
@@ -66,12 +109,37 @@ export function TestimonialsSection() {
       {/* Full-bleed: spans the viewport, independent of the heading's max-width */}
       <div
         ref={carouselRef}
-        className="testimonial-carousel no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 sm:mt-10 sm:px-6 lg:px-8"
+        onMouseEnter={() => {
+          pausedRef.current = true;
+        }}
+        onMouseLeave={() => {
+          pausedRef.current = false;
+        }}
+        onFocus={() => {
+          pausedRef.current = true;
+        }}
+        onBlur={() => {
+          pausedRef.current = false;
+        }}
+        onTouchStart={() => {
+          pausedRef.current = true;
+        }}
+        onTouchEnd={() => {
+          pausedRef.current = false;
+        }}
+        className="testimonial-carousel no-scrollbar mt-8 flex gap-4 overflow-x-auto scroll-smooth px-4 pb-4 sm:mt-10 sm:px-6 lg:px-8"
       >
         {testimonials.map((testimonial) => (
           <TestimonialCard
             key={`${testimonial.name}-${testimonial.company}`}
             testimonial={testimonial}
+          />
+        ))}
+        {testimonials.map((testimonial) => (
+          <TestimonialCard
+            key={`${testimonial.name}-${testimonial.company}-duplicate`}
+            testimonial={testimonial}
+            ariaHidden
           />
         ))}
       </div>
@@ -83,12 +151,15 @@ type Testimonial = (typeof siteData.testimonials.items)[number];
 
 function TestimonialCard({
   testimonial,
+  ariaHidden,
 }: {
   testimonial: Testimonial;
+  ariaHidden?: boolean;
 }) {
   return (
     <article
-      className="w-[min(76vw,280px)] shrink-0 snap-start rounded-[22px] border border-hairline bg-white p-5 shadow-small sm:w-[320px] sm:p-6 xl:w-[340px]"
+      aria-hidden={ariaHidden}
+      className="w-[min(76vw,280px)] shrink-0 rounded-[22px] border border-hairline bg-white p-5 shadow-small sm:w-[320px] sm:p-6 xl:w-[340px]"
     >
       <div className="flex items-center gap-3">
         <div
