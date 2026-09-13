@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 
+import { AutoPlayVideo } from "@/components/autoplay-video";
+
 const navItems = [
   { id: "overview", label: "Overview" },
   { id: "primary-research", label: "Primary Research" },
@@ -319,15 +321,10 @@ export function HushhCaseStudy() {
 
             <figure className="mt-8 flex flex-col gap-2">
               <div className="case-study-cover-frame overflow-hidden rounded-xl border border-hairline bg-blue-0 shadow-small">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <AutoPlayVideo
+                  src="/videos/hushh-thumb.mp4"
                   className="h-full w-full object-contain"
-                >
-                  <source src="/videos/hushh-thumb.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
               <figcaption className="font-mono text-mono-caption text-gray-400">
                 Fig 1. Hushh Wallet MVP prototype

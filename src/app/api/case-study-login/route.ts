@@ -11,7 +11,7 @@ function redirectToLogin(request: NextRequest, nextPath: string) {
   url.searchParams.set("error", "1");
   url.searchParams.set("next", nextPath);
 
-  return NextResponse.redirect(url);
+  return NextResponse.redirect(url, { status: 303 });
 }
 
 export async function POST(request: NextRequest) {
@@ -25,7 +25,9 @@ export async function POST(request: NextRequest) {
   }
 
   const token = await createCaseStudyAuthToken(password);
-  const response = NextResponse.redirect(new URL(nextPath, request.url));
+  const response = NextResponse.redirect(new URL(nextPath, request.url), {
+    status: 303,
+  });
 
   response.cookies.set({
     name: CASE_STUDY_AUTH_COOKIE,

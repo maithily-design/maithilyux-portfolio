@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Lock } from "lucide-react";
 
+import { AutoPlayVideo } from "@/components/autoplay-video";
 import caseStudies from "@/data/case-studies.json";
 import siteData from "@/data/site-data.json";
 import { isProtectedCaseStudySlug } from "@/lib/case-study-auth";
@@ -177,19 +178,14 @@ function CaseStudyCard({
           (craigslist ? "bg-[#ffd7fb]" : "bg-white")
         }
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <AutoPlayVideo
+          src={videoSrc(project.thumbnail)}
           className={
             craigslist
               ? "w-[86%] max-w-[448px] rounded-xl object-contain sm:w-[83%]"
               : "h-full w-full rounded-xl object-cover"
           }
-        >
-          <source src={videoSrc(project.thumbnail)} type="video/mp4" />
-        </video>
+        />
       </div>
     </motion.article>
   );
