@@ -85,7 +85,7 @@ export function WorkSection() {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className={
             "flex w-full flex-col " +
-            (stackProjects ? "gap-6 pb-24 lg:pb-32" : "gap-12")
+            (stackProjects ? "gap-6 pb-14 sm:pb-20 lg:pb-32" : "gap-12")
           }
         >
           {projects.map((project, index) => (
@@ -131,11 +131,11 @@ function CaseStudyCard({
           : undefined
       }
       className={
-        "grid overflow-hidden rounded-[16px] bg-blue-0 p-2.5 shadow-[0px_4px_8px_rgba(0,0,0,0.04)] lg:min-h-[540px] lg:grid-cols-[minmax(410px,0.88fr)_minmax(0,1.12fr)] xl:min-h-[572px] " +
-        (enableStack ? "sticky" : "")
+        "grid overflow-hidden rounded-[16px] bg-blue-0 p-2 shadow-[0px_4px_8px_rgba(0,0,0,0.04)] sm:p-2.5 lg:min-h-[540px] lg:grid-cols-[minmax(410px,0.88fr)_minmax(0,1.12fr)] xl:min-h-[572px] " +
+        (enableStack ? "md:sticky" : "")
       }
     >
-      <div className="flex min-h-[400px] flex-col justify-center gap-8 rounded-t-[14px] bg-white px-6 py-9 sm:px-8 lg:min-h-[520px] lg:rounded-l-[14px] lg:rounded-r-none xl:min-h-[552px]">
+      <div className="flex flex-col justify-center gap-5 rounded-t-[14px] bg-white px-5 py-6 sm:min-h-[400px] sm:gap-8 sm:px-8 sm:py-9 lg:min-h-[520px] lg:rounded-l-[14px] lg:rounded-r-none xl:min-h-[552px]">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
@@ -154,11 +154,11 @@ function CaseStudyCard({
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-6">
-          <h3 className="max-w-[458px] text-[32px] font-bold leading-[1.1] tracking-[-0.005em] text-blue-900 sm:text-[40px] sm:leading-[48px]">
+        <div className="flex flex-col gap-4 sm:gap-6">
+          <h3 className="max-w-[458px] text-[26px] font-bold leading-[1.08] tracking-[-0.005em] text-blue-900 sm:text-[40px] sm:leading-[48px]">
             {project.title}
           </h3>
-          <p className="max-w-[466px] text-[16px] font-semibold leading-6 tracking-[-0.005em] text-ink-secondary">
+          <p className="max-w-[466px] text-[14px] font-semibold leading-5 tracking-[-0.005em] text-ink-secondary sm:text-[16px] sm:leading-6">
             {project.subtitle}
           </p>
         </div>
@@ -166,7 +166,7 @@ function CaseStudyCard({
         <Link
           href={`/work/${project.slug}`}
           prefetch={locked ? false : undefined}
-          className="inline-flex w-fit rotate-[0.37deg] items-center justify-center rounded-[6px] border-2 border-white bg-blue-500 px-6 py-3 font-mono text-[12px] font-medium uppercase leading-4 tracking-[0.06em] text-white shadow-[0px_2px_4px_#e0edff] transition hover:-translate-y-0.5 hover:bg-blue-600"
+          className="inline-flex w-fit rotate-[0.37deg] items-center justify-center rounded-[6px] border-2 border-white bg-blue-500 px-5 py-2.5 font-mono text-[11px] font-medium uppercase leading-4 tracking-[0.06em] text-white shadow-[0px_2px_4px_#e0edff] transition hover:-translate-y-0.5 hover:bg-blue-600 sm:px-6 sm:py-3 sm:text-[12px]"
         >
           {locked ? "Unlock Case Study" : "View Case Study"}
         </Link>
@@ -174,7 +174,7 @@ function CaseStudyCard({
 
       <div
         className={
-          "flex min-h-[320px] items-center justify-center overflow-hidden rounded-b-[14px] lg:min-h-[520px] lg:rounded-l-none lg:rounded-r-[14px] xl:min-h-[552px] " +
+          "flex h-[220px] items-center justify-center overflow-hidden rounded-b-[14px] sm:h-auto sm:min-h-[320px] lg:min-h-[520px] lg:rounded-l-none lg:rounded-r-[14px] xl:min-h-[552px] " +
           (craigslist ? "bg-[#ffd7fb]" : "bg-white")
         }
       >

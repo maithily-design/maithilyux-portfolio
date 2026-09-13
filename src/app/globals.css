@@ -283,4 +283,12 @@
   .testimonial-track > [aria-hidden="true"] {
     display: none;
   }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
